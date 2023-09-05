@@ -15,8 +15,6 @@ jobs:
 
       - name: Comentar en Pull Request
         uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           MESSAGE: "Se ha realizado un push en esta rama."
 
