@@ -34,19 +34,12 @@ public class MainActivity extends AppCompatActivity {
                 String cadena = num.getText().toString();
                 int numero_f = Integer.parseInt(cadena);
 
-                AlertDialog.Builder resultado = new AlertDialog.Builder(MainActivity.this);
-                resultado.setMessage("El Fibonacci de su número es: "+ fibonacci.Calcular(numero_f));
-                resultado.setCancelable(false);
-                resultado.setNegativeButton("¡Hecho!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int i) {
-                        dialog.cancel();
-                        num.setText("");
-                    }
-                });
-                AlertDialog titulo = resultado.create();
-                titulo.setTitle("Resultado");
-                titulo.show();
+                int resultado = fibonacci.Calcular(numero_f);
+
+                mostrar.setText("Resultado: " + resultado);
+                mostrar.setVisibility(View.VISIBLE);
+
+                num.setText("");
             }
         });
     }

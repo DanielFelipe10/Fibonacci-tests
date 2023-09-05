@@ -10,6 +10,9 @@ public class fibonacciTest {
 
         int resultado = Fibonacci.Calcular(1);
         assertEquals(1, resultado);
+
+        resultado = Fibonacci.Calcular(0);
+        assertEquals(0, resultado);
     }
 
     @Test
@@ -17,8 +20,11 @@ public class fibonacciTest {
 
         int resultado = Fibonacci.Calcular(10);
         assertEquals(55, resultado);
+
+        resultado = Fibonacci.Calcular(7);
+        assertEquals(13, resultado);
     }
 
-    
+
 
 }

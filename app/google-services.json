@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "286650082532",
+    "project_id": "fibonacci-58633",
+    "storage_bucket": "fibonacci-58633.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286650082532:android:1f21cdaa3a0b97f466f8f1",
+        "android_client_info": {
+          "package_name": "com.example.fibonacci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286650082532-h9ro4o04e7v602edrvs9pqd67nf9r3rs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYldDhlcKVffXjDdxdFLCqyweSEZYR7R8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286650082532-h9ro4o04e7v602edrvs9pqd67nf9r3rs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+name: Comentar en Pull Request en Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  comment-on-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v2
+
+      - name: Comentar en Pull Request
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          MESSAGE: "Se ha realizado un push en esta rama."
+
