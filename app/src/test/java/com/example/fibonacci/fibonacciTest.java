@@ -6,12 +6,19 @@ import org.junit.Test;
 
 public class fibonacciTest {
     @Test
-    public void testCalcularConCasoBase() {
+    public void casosIguales(){
 
-        int resultado = Fibonacci.Calcular(0);
-        assertEquals(0, resultado);
-
-        resultado = Fibonacci.Calcular(1);
+        int resultado = Fibonacci.Calcular(1);
         assertEquals(1, resultado);
     }
+
+    @Test
+    public void casoNormal(){
+
+        int resultado = Fibonacci.Calcular(10);
+        assertEquals(55, resultado);
+    }
+
+    
+
 }
