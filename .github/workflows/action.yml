@@ -1,20 +1,24 @@
-name: Comentar en Pull Request en Push
-
+name: Enviar Alerta en Commit
 on:
   push:
     branches:
       - main
 
 jobs:
-  comment-on-pr:
+  send-alert:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del código
+      - name: Checkout el código
         uses: actions/checkout@v2
 
-      - name: Comentar en Pull Request
-        uses: actions/github-script@v4
-        env:
-          MESSAGE: "Se ha realizado un push en esta rama."
+      - name: Obtener número del commit
+        id: commit_number
+        run: echo "::set-output name=commit_num::$(git rev-list --count HEAD)"
+
+      - name: Enviar Alerta con número de commit
+        run: |
+          commit_num=${{ steps.commit_number.outputs.commit_num }}
+          echo "Se ha realizado un nuevo commit en el repositorio. Número de commit: $commit_num"
+
 
